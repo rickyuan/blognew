@@ -1,0 +1,1 @@
+****This is a new blog with movie and music and life.
