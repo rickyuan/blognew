@@ -29,9 +29,13 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process :scale => [50, 50]
-  # end
+  version :normal do
+    process :resize_to_fit => [620, 620]
+  end
+  
+  version :thumb, from_version => :normal do
+     process :resize_to_fit => [300, 168]
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

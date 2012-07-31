@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<div class="span8">
+			<%= form_for @movie, :html => { :multipart => true } do |f| %>
+				<div>
+					<%= f.label :cname, "中文名称" %>
+					<%= f.text_field :cname %>
+				</div>
+				<div>
+					<%= f.label :oname, "原名" %>
+					<%= f.text_field :oname %>
+				</div>
+				<div>
+					<%= f.label :location, "地区" %>
+					<%= f.text_field :location %>
+				</div>
+				<div>
+					<%= f.label :releasedate, "上映日期" %>
+					<%= f.date_select(:releasedate, :start_year => 1905) %>
+				</div>
+				<div>
+					<%= f.label :screenshot, "截图" %>
+					<%= f.file_field :screenshot %>
+				</div>
+				<div>
+					<%= f.label :review, "评论" %>
+					<%= f.text_area(:review, :rows => 2, :class => 'span8') %>
+				</div>
+				<div>
+					<%= f.submit "创建" %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

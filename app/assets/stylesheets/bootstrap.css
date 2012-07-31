@@ -164,6 +164,11 @@ body {
   background-color: #ffffff;
 }
 
+body {
+	padding-top: 80px;
+	position: relative;
+}
+
 a {
   color: #0088cc;
   text-decoration: none;
