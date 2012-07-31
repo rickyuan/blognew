@@ -33,7 +33,7 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [620, 620]
   end
   
-  version :thumb, from_version => :normal do
+  version :thumb, :from_version => :normal do
      process :resize_to_fit => [300, 168]
   end
 

@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
   end
   
   def create
-    @movie = Movie.build(params[:movie])
+    @movie = Movie.new(params[:movie])
     if @movie.save
       redirect_to @movie, :flash => { :success => "Created a movie successful." }
     else

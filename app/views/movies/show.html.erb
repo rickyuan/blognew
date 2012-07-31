@@ -3,7 +3,7 @@
 		<div class="span8">
         	<%= image_tag(@movie.screenshot.normal.url) %>
 			<div class="info">
-				<h2><%= @movie.cname %> <%= @movie.oname if @movie.oname.nil? %></h2>
+				<h2><%= @movie.cname %> <%= @movie.oname unless @movie.oname.nil? %></h2>
 				<span>地区</span>:<%= @movie.location %>
 				<span>上映日期</span>:<%= @movie.releasedate %>
 				<span class="review"><%= @movie.review %></span>
