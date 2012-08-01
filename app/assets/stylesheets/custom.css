@@ -1,0 +1,11 @@
+.info span {
+	color: #999999;
+}
+
+.review {
+	margin: 10px;
+	padding-left: 4px;
+	border-left: 2px solid #0088cc;
+	background: #f9f9f9;
+	font-style: italic;
+}

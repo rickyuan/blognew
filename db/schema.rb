@@ -11,7 +11,48 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120729110258) do
+ActiveRecord::Schema.define(:version => 20120801072214) do
+
+  create_table "actors", :force => true do |t|
+    t.string   "cname"
+    t.string   "oname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "crews", :force => true do |t|
+    t.string   "cname"
+    t.string   "oname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "movie_id"
+    t.integer  "director_id"
+    t.integer  "actor_id"
+  end
+
+  create_table "crews_movies", :id => false, :force => true do |t|
+    t.integer "crew_id"
+    t.integer "movie_id"
+  end
+
+  create_table "directors", :force => true do |t|
+    t.string   "cname"
+    t.string   "oname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "genres", :force => true do |t|
+    t.string   "cname"
+    t.string   "ename"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "genres_movies", :id => false, :force => true do |t|
+    t.integer "genre_id"
+    t.integer "movie_id"
+  end
 
   create_table "movies", :force => true do |t|
     t.string   "cname"
@@ -20,6 +61,14 @@ ActiveRecord::Schema.define(:version => 20120729110258) do
     t.text     "review"
     t.string   "location"
     t.date     "releasedate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "renyuans", :force => true do |t|
+    t.integer  "movie_id"
+    t.integer  "director_id"
+    t.integer  "actor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
