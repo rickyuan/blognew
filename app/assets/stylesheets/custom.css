@@ -9,3 +9,24 @@
 	background: #f9f9f9;
 	font-style: italic;
 }
+
+.square {
+	float: left;
+	width: 320px;
+	padding: 0 30px 20px 0;
+}
+
+.square img {
+	width: 320px;
+	height: 180px;
+}
+
+.page_title {
+	border-left: 3px solid #0088cc;
+	font-size: 18px;
+	letter-spacing: 1px;
+	display: block;
+	margin-bottom: 10px;
+	background: #f9f9f9;
+	padding: 10px 0 10px 4px;
+}
