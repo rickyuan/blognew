@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801072214) do
+ActiveRecord::Schema.define(:version => 20120808092343) do
 
   create_table "actors", :force => true do |t|
     t.string   "cname"
@@ -69,6 +69,14 @@ ActiveRecord::Schema.define(:version => 20120801072214) do
     t.integer  "movie_id"
     t.integer  "director_id"
     t.integer  "actor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reslinks", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "movie_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

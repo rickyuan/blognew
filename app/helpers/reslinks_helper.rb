@@ -1,0 +1,2 @@
+module ReslinksHelper
+end

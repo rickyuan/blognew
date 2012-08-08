@@ -1,6 +1,8 @@
 Blognew::Application.routes.draw do
   root to: 'movies#index'
-  resources :movies
+  resources :movies do
+    resources :reslinks
+  end
   resources :renyuans
   resources :genres
   resources :directors

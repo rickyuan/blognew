@@ -4,6 +4,7 @@ class Movie < ActiveRecord::Base
   has_many :actors, :through => :renyuans
   has_many :renyuans
   has_and_belongs_to_many :genres
+  has_many :reslinks
   mount_uploader :screenshot, ScreenshotUploader
   
   def director!(directors)

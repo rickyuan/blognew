@@ -21,10 +21,16 @@ class MoviesController < ApplicationController
   
   def show
     @movie = Movie.find(params[:id])
+    @directors = @movie.directors
+    @actors = @movie.actors
+    @genres = @movie.genres
   end
   
   def edit
     @movie = Movie.find(params[:id])
+    @directors = @movie.directors
+    @actors = @movie.actors
+    @genres = @movie.genres
   end
   
   def update

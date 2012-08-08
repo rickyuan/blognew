@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="span9">
+			<span class="page_title">添加电影播放或者下载链接</span>
+	 		<%= form_for([@movie, @reslink]) do |f| %>
+				<div>
+					<%= f.label :title, '链接名称' %>
+					<%= f.text_field :title %>
+				</div>
+				<div>
+					<%= f.label :content, '链接地址' %>
+					<%= f.text_field :content %>
+				</div>
+				<div>
+					<%= f.submit '创建' %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
