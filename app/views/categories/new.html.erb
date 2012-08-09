@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="span9">
+			<span class="page_title">添加文章类别</span>
+	 		<%= form_for(@category) do |f| %>
+				<div>
+					<%= f.label :name, '类别名称' %>
+					<%= f.text_field :name %>
+				</div>
+				<div>
+					<%= f.label :ename, '英文名称' %>
+					<%= f.text_field :ename %>
+				</div>
+				<div>
+					<%= f.submit '创建' %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

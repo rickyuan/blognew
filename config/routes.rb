@@ -1,5 +1,6 @@
 Blognew::Application.routes.draw do
   root to: 'movies#index'
+  match '/articles', to: 'articles#index'
   resources :movies do
     resources :reslinks
   end
@@ -7,6 +8,10 @@ Blognew::Application.routes.draw do
   resources :genres
   resources :directors
   resources :actors
+  resources :categories
+  resources :articles
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

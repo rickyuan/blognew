@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="span9">
+			<span class="page_title">撰写文章</span>
+	 		<%= form_for(@article) do |f| %>
+				<div>
+					<%= f.label :title, '标题' %>
+					<%= f.text_field :title %>
+				</div>
+				<div>
+					<%= f.label :content, '内容' %>
+					<%= f.text_area(:content, :rows => 10, :class => 'span9') %>
+				</div>
+				<div>
+					<%= f.label :category_id, '类别' %>
+					<%= collection_select(:article, :category_id, @categories, :id, :name, {:prompt => false}) %>
+				<div>
+					<%= f.submit '创建' %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
