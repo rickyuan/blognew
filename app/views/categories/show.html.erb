@@ -3,6 +3,7 @@
 		<div class="span9">
 				<span class="page_title">类型</span>
 	 			<%= @category.name %>
+				<%= link_to 'Delete', category_path(@category), :confirm => "Are you sure?", :method => :delete %>
 		</div>
 	</div>
 </div>

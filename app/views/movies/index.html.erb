@@ -1,8 +1,9 @@
 <div class="container">
 	<div class="row">
 		<div class="span9">
-				<span class="page_title">最近收看的电影</span>
+				<span class="page_title">电影收藏</span>
 	 			<%= render @movies %>
+				<%= paginate @movies %>
 		</div>
 	</div>
 </div>

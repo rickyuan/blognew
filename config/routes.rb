@@ -1,15 +1,18 @@
 Blognew::Application.routes.draw do
   root to: 'movies#index'
-  match '/articles', to: 'articles#index'
   resources :movies do
-    resources :reslinks
+    resources :reslinks do
+    get 'page/:page', :action => :index, :on => :collection
+  end
   end
   resources :renyuans
   resources :genres
   resources :directors
   resources :actors
   resources :categories
-  resources :articles
+  resources :articles do
+    get 'page/:page', :action => :index, :on => :collection
+  end
   
   
   # The priority is based upon order of creation:

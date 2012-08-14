@@ -69,6 +69,7 @@ sub {
 img {
   max-width: 100%;
   vertical-align: middle;
+  margin: 6px 0;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
@@ -479,7 +480,7 @@ h2 {
 }
 
 h2 small {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 h3 {
@@ -488,7 +489,7 @@ h3 {
 }
 
 h3 small {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 h4,
@@ -589,7 +590,7 @@ dd {
 }
 
 hr {
-  margin: 18px 0;
+  margin: 12px 0;
   border: 0;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;
@@ -4013,7 +4014,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .pagination {
-  height: 36px;
+/*  height: 36px;*/
   margin: 18px 0;
 }
 
@@ -4035,12 +4036,21 @@ input[type="submit"].btn.btn-mini {
   display: inline;
 }
 
+.pagination li.current {
+  float: left;
+  padding: 0 14px;
+  line-height: 34px;
+  text-decoration: none;
+/*  border: 1px solid #ddd;*/
+  border-left-width: 0;
+}
+
 .pagination a {
   float: left;
   padding: 0 14px;
   line-height: 34px;
   text-decoration: none;
-  border: 1px solid #ddd;
+/*  border: 1px solid #ddd;*/
   border-left-width: 0;
 }
 

@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.order(:created_at).page params[:page]
   end
   
   def new
@@ -43,6 +43,12 @@ class MoviesController < ApplicationController
     else
       render 'edit'
     end
+  end
+  
+  def destroy
+    @movie = Movie.find(params[:id])
+    @movie.destroy
+    redirect_to root_path
   end
   
 end

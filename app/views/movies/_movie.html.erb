@@ -1,8 +1,5 @@
 <div class="square">
-	<div>
 		<%= link_to image_tag(movie.screenshot.thumb.url), movie_path(movie.id) %>
-	</div>
-	<div>
 		<h4><%= movie.cname %></h4>
-	</div>
+	    <span class="muted"><%= movie.review %></span>
 </div>

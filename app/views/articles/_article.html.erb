@@ -1,0 +1,2 @@
+<h3><%= link_to article.title, article_path(article) %><small class="muted pull-right" ><%= article.created_at.to_date %> • <%= link_to article.category.name, category_path(article.category_id) %></small></h3>
+<hr>
