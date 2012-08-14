@@ -7,6 +7,7 @@ class Movie < ActiveRecord::Base
   has_many :reslinks
   mount_uploader :screenshot, ScreenshotUploader
   paginates_per 4
+  default_scope order('created_at DESC')
   
   def director!(directors)
     directors = directors.split(" ").map do |director|
