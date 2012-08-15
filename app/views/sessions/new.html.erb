@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<div class="span9">
+	 		<%= form_tag sessions_path do %>
+				<div>
+					输入管理员密码:</br>
+					<%= password_field_tag :password %>
+				</div>
+				<div>
+					<%= submit_tag '登录', :class => "btn" %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

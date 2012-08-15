@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
+		<span class="page_title">撰写文章</span>
 		<div class="span9">
-			<span class="page_title">撰写文章</span>
 	 		<%= form_for([@category, @article]) do |f| %>
 				<div>
 					<%= f.label :title, '标题' %>
@@ -16,7 +16,7 @@
 					<%= f.collection_select :category_id, @categories, :id, :name, {:prompt => false} %>
 				</div>
 				<div>
-					<%= f.submit '创建' %>
+					<%= f.submit '创建', :class => "btn" %>
 				</div>
 			<% end %>
 		</div>

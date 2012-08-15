@@ -15,8 +15,10 @@
 				<hr>
 				<small class="muted">创建于<%= @movie.created_at.to_date %></small>
 			</div>
+			<% if admin? %>
 			<%= link_to 'Edit', edit_movie_path(@movie) %>
 			<%= link_to 'Delete', movie_path(@movie), :confirm => "Are you sure?", :method => :delete %>
+			<% end %>
 		</div>
 	</div>
 </div>

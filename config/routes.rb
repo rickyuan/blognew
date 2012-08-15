@@ -1,9 +1,11 @@
 Blognew::Application.routes.draw do
   root to: 'movies#index'
+  match '/admin', to: 'sessions#new'
+  match '/logout', to: 'sessions#destroy', :as => 'logout'
+  resources :sessions
   resources :movies do
-    resources :reslinks do
+    resources :reslinks
     get 'page/:page', :action => :index, :on => :collection
-  end
   end
   resources :renyuans
   resources :genres

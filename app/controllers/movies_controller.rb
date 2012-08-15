@@ -1,6 +1,10 @@
 class MoviesController < ApplicationController
+  before_filter :authorize, :except => [:index, :show]
   def index
     @movies = Movie.order.page params[:page]
+    @genres = Genre.all
+    @category = Category.find_by_id('2')
+    @articles = @category.articles
   end
   
   def new

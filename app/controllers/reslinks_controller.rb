@@ -1,4 +1,5 @@
 class ReslinksController < ApplicationController
+  before_filter :authorize, :except => [:index, :show]
   def new
     @movie = Movie.find(params[:movie_id])
     @reslink = @movie.reslinks.build

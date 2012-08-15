@@ -1,4 +1,5 @@
 class ActorsController < ApplicationController
+  before_filter :authorize, :except => [:index, :show]
   def index
     @actors = Actor.all
   end

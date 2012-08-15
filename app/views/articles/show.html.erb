@@ -4,9 +4,11 @@
 			<span class="page_title">文章详情</span>
 			<h2><%= @article.title %></h2>
 			<p><%= markdown @article.content %></p>
-			<small class="muted" ><%= @article.created_at.to_date %> • <%= link_to @article.category.name, category_path(@article.category_id) %></small>
+			<small class="muted" ><%= @article.created_at.to_date %> • <%= @article.category.name %></small>
+			<% if admin? %>
 			<%= link_to 'Delete', article_path(@article), :confirm => "Are you sure?", :method => :delete %>
 			<%= link_to 'Edit', edit_article_path(@article) %>
+			<% end %>
 		</div>
 	</div>
 </div>
