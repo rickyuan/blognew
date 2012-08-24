@@ -14,8 +14,8 @@ development:
   reconnect: false
   database: blognew_development
   pool: 5
-  username: root
-  password: root123
+  username: blognew
+  password: '123456'
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -27,8 +27,8 @@ test:
   reconnect: false
   database: blognew_test
   pool: 5
-  username: root
-  password: root123
+  username: blognew
+  password: '123456'
   socket: /tmp/mysql.sock
 
 production:
@@ -37,6 +37,11 @@ production:
   reconnect: false
   database: blognew_production
   pool: 5
+<<<<<<< HEAD
   username: ricky
   password: la778899
+=======
+  username: blognew
+  password: '123456'
+>>>>>>> upstream/master
   socket: /var/run/mysqld/mysqld.sock
