@@ -37,6 +37,11 @@ production:
   reconnect: false
   database: blognew_production
   pool: 5
+<<<<<<< HEAD
+  username: ricky
+  password: la778899
+=======
   username: blognew
   password: '123456'
+>>>>>>> upstream/master
   socket: /var/run/mysqld/mysqld.sock
