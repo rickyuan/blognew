@@ -39,4 +39,4 @@ production:
   pool: 5
   username: blognew
   password: '123456'
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /var/lib/mysqld/mysqld.sock
