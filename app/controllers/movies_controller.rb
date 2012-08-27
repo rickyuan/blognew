@@ -1,14 +1,17 @@
+# encoding: utf-8
 class MoviesController < ApplicationController
   before_filter :authorize, :except => [:index, :show]
   def index
     @movies = Movie.order.page params[:page]
     @genres = Genre.all
+    @pagetitle = "电影列表"
     # @category = Category.find_by_id('2')
     # @articles = @category.articles
   end
   
   def new
     @movie = Movie.new
+    @pagetitle = "新建电影"
   end
   
   def create
@@ -28,6 +31,7 @@ class MoviesController < ApplicationController
     @directors = @movie.directors
     @actors = @movie.actors
     @genres = @movie.genres
+    @pagetitle = @movie.cname
   end
   
   def edit

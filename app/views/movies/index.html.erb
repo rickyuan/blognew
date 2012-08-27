@@ -1,9 +1,9 @@
 <div class="container">
+	<div id="content">
 	<div class="row">
 		<span class="page_title">电影收藏</span>
 		<div class="span9">
 	 			<%= render @movies %>
-				<%= paginate @movies %>
 		</div>
 		<div class="row">
 			<div class="span3">
@@ -11,5 +11,9 @@
 				<%= render @genres %>
 			</div>
 		</div>		
+	</div>
+	<div class="row">
+		<%= paginate @movies %>
+	</div>
 	</div>
 </div>

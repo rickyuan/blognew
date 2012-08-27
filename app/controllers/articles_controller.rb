@@ -1,12 +1,15 @@
+# encoding: utf-8
 class ArticlesController < ApplicationController
   before_filter :authorize, :except => [:index, :show]
   def index
     @articles = Article.order.page params[:page]
+    @pagetitle = "文章"
   end
   
   def new
     @categories = Category.all
     @article = Article.new
+    @pagetitle = "写文章"
   end
   
   def create
@@ -20,6 +23,7 @@ class ArticlesController < ApplicationController
   
   def show
     @article = Article.find(params[:id])
+    @pagetitle = @article.title
   end
   
   def edit

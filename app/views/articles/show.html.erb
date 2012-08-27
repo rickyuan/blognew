@@ -1,7 +1,7 @@
 <div class="container">
+	<div id="content">
 	<div class="row">
 		<div class="span9">
-			<span class="page_title">文章详情</span>
 			<h2><%= @article.title %></h2>
 			<p><%= markdown @article.content %></p>
 			<small class="muted" ><%= @article.created_at.to_date %> • <%= @article.category.name %></small>
@@ -10,5 +10,6 @@
 			<%= link_to 'Edit', edit_article_path(@article) %>
 			<% end %>
 		</div>
+	</div>
 	</div>
 </div>
