@@ -6,7 +6,7 @@ class Movie < ActiveRecord::Base
   has_and_belongs_to_many :genres
   has_many :reslinks
   mount_uploader :screenshot, ScreenshotUploader
-  paginates_per 4
+  paginates_per 6
   default_scope order('created_at DESC')
   
   def director!(directors)
