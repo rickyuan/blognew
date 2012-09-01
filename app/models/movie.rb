@@ -9,6 +9,10 @@ class Movie < ActiveRecord::Base
   paginates_per 6
   default_scope order('created_at DESC')
   
+  def to_param
+    "#{id} #{oname}".parameterize
+  end
+  
   def director!(directors)
     directors = directors.split(" ").map do |director|
       Director.find_or_create_by_cname(director)

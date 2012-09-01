@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
     @movies = Movie.order.page params[:page]
     @genres = Genre.all
     @pagetitle = "电影列表"
+    @meta_description = "ShiWai.In收集的电影，看过的电影，一句话短评，电影介绍以及资源下载，在线收看。"
     # @category = Category.find_by_id('2')
     # @articles = @category.articles
   end
@@ -32,6 +33,7 @@ class MoviesController < ApplicationController
     @actors = @movie.actors
     @genres = @movie.genres
     @pagetitle = @movie.cname
+    @meta_description =  @movie.cname + ", " + @movie.oname + ", " + @movie.review + ", " + "电影介绍，资源下载和在线收看。"
   end
   
   def edit
