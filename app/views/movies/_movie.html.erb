@@ -1,5 +1,5 @@
 <div class="square">
-		<%= link_to image_tag(movie.screenshot.thumb.url), movie_path(movie.id) %>
+		<%= link_to image_tag(movie.screenshot.thumb.url, :alt => movie.cname), movie_path(movie.id) %>
 		<h4><%= movie.cname %></h4>
 	    <span class="muted"><%= movie.review %></span>
 </div>

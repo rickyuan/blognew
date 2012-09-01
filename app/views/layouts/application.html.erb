@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ShiWai.In | 电影、音乐、摄影、生活 | <%= @pagetitle %></title>
+  <title><%= @pagetitle %> | ShiWai.In</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <meta content="<%= @meta_description %>" name="description">
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
