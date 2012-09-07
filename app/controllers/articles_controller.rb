@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_filter :authorize, :except => [:index, :show]
   def index
     @articles = Article.order.page params[:page]
-    @pagetitle = "文章"
+    @pagetitle = "文章-ShiWai.In"
     @meta_description = "电影，音乐，旅行，互联网，所思所想，文章列表。"
   end
   

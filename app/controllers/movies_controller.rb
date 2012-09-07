@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.order.page params[:page]
     @genres = Genre.all
-    @pagetitle = "电影列表"
+    @pagetitle = "电影列表-ShiWai.In"
     @meta_description = "ShiWai.In收集的电影，看过的电影，一句话短评，电影介绍以及资源下载，在线收看。"
     # @category = Category.find_by_id('2')
     # @articles = @category.articles

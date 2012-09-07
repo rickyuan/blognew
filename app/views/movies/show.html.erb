@@ -25,7 +25,7 @@
 	        <script type="text/javascript">
 	            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 	            var disqus_shortname = 'shiwai';
-	            var disqus_identifier = '<%= @movie.id %>';
+	            var disqus_identifier = '<%= movie_path(@movie) %>';
 	            var disqus_url = '<%= url_for(:action => 'show', :controller => 'movies', :host => 'shiwai.in') %>';
 	        
 
