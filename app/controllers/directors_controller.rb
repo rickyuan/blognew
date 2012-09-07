@@ -11,6 +11,7 @@ class DirectorsController < ApplicationController
     @director = Director.find(params[:id])
     @pagetitle = @director.cname
     @meta_description = @director.cname + "导演的电影。"
+    @canonical_url = url_for(@director)
   end
   
 end

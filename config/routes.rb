@@ -15,7 +15,7 @@ Blognew::Application.routes.draw do
   resources :articles do
     get 'page/:page', :action => :index, :on => :collection
   end
-  
+  get 'sitemap.xml' => 'sitemaps#index', as:'sitemap', defaults:{format:'xml'}
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -11,6 +11,7 @@ class ActorsController < ApplicationController
     @actor = Actor.find(params[:id])
     @pagetitle = @actor.cname
     @meta_description = @actor.cname + "出演的电影。"
+    @canonical_url = url_for(@actor)
   end
   
 end
