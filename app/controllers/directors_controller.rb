@@ -5,6 +5,7 @@ class DirectorsController < ApplicationController
     @directors = Director.all
     @pagetitle = "导演列表"
     @meta_description = "ShiWai.In 收集的电影导演，以及他们执导的电影。"
+    @canonical_url = directors_url
   end
   
   def show
