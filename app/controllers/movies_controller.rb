@@ -34,6 +34,7 @@ class MoviesController < ApplicationController
     @genres = @movie.genres
     @pagetitle = @movie.cname
     @meta_description =  @movie.cname + ", " + @movie.oname + ", " + @movie.review + ", " + "电影介绍，资源下载和在线收看。"
+    @canonical_url = url_for(@movie)
   end
   
   def edit

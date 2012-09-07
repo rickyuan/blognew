@@ -11,6 +11,7 @@ class GenresController < ApplicationController
     @genre = Genre.find(params[:id])
     @pagetitle = @genre.cname
     @meta_description = @genre.cname + "下所有的电影。"
+    @canonical_url = url_for(@genre)
   end
 
 end

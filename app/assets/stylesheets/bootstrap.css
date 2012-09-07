@@ -162,7 +162,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
 }
 
 body {
@@ -620,8 +620,9 @@ abbr.initialism {
 
 blockquote {
   padding: 0 0 0 15px;
-  margin: 0 0 18px;
+  margin: 4px 0 18px;
   border-left: 5px solid #eeeeee;
+  color: #999999;
 }
 
 blockquote p {

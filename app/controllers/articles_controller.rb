@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @pagetitle = @article.title
     @meta_description = @article.title + ", " + @article.content[0..100]
+    @canonical_url = url_for(@article)
   end
   
   def edit

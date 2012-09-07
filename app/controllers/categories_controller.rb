@@ -23,6 +23,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @pagetitle = @category.name
+    @canonical_url = url_for(@category)
   end
   
   def destroy
