@@ -5,6 +5,7 @@ class GenresController < ApplicationController
     @genres = Genre.all
     @pagetitle = "电影类别"
     @meta_description = "ShiWai.In收集的电影，所有的类别。"
+    @canonical_url = genres_url
   end
   
   def show

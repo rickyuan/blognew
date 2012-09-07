@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
     @articles = Article.order.page params[:page]
     @pagetitle = "文章"
     @meta_description = "电影，音乐，旅行，互联网，所思所想，文章列表。"
+    @canonical_url = articles_url
   end
   
   def new

@@ -5,6 +5,7 @@ class ActorsController < ApplicationController
     @pagetitle = "演员列表"
     @actors = Actor.all
     @meta_description = "ShiWai.In 收集的电影演员，以及他们出演的电影。"
+    @canonical_url = actors_url
   end
   
   def show
