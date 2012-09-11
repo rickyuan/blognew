@@ -18,12 +18,14 @@ xml.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") do
      xml.url do
        xml.loc movie_url(movie)
        xml.priority 1.0
+       xml.lastmod movie.updated_at.to_date
       end
     end
     
     @articles.each do |article|
       xml.url do
         xml.loc article_url(article)
+        xml.lastmod article.updated_at.to_date
         xml.priority 1.0
        end
      end
@@ -31,21 +33,24 @@ xml.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") do
      @genres.each do |genre|
        xml.url do
          xml.loc genre_url(genre)
-         xml.priority 1.0
+         xml.lastmod genre.updated_at.to_date
+         xml.priority 0.9
         end
       end
       
       @directors.each do |director|
         xml.url do
           xml.loc director_url(director)
-          xml.priority 1.0
+          xml.lastmod director.updated_at.to_date
+          xml.priority 0.9
          end
        end
        
        @actors.each do |actor|
          xml.url do
            xml.loc actor_url(actor)
-           xml.priority 1.0
+           xml.lastmod actor.updated_at.to_date
+           xml.priority 0.9
           end
         end
 end
