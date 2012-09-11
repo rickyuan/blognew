@@ -1,15 +1,25 @@
 class SitemapSweeper < ActionController::Caching::Sweeper
   observe Movie, Article
 
-  def sweep(movie)
-    expire_page(sitemap_path)
+  def after_create(movie)
+    expire_cache_for(sitemap)
   end
   
-  def sweep(article)
-    expire_page(sitemap_path)
+  def after_create(article)
+    expire_cache_for(sitemap)
+  end
+  
+  def after_update(movie)
+    expire_cache_for(sitemap)
+  end
+  
+  def after_update(article)
+    expire_cache_for(sitemap)
   end
 
-  alias_method :after_create, :sweep
-  alias_method :after_update, :sweep
-  alias_method :after_destroy, :sweep
+  private
+  def expire_cache_for(sitemap)
+    expire_page(:controller => 'sitemaps', :action => 'index')
+  end
+  
 end
