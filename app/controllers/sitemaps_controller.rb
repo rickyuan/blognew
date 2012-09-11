@@ -1,6 +1,6 @@
 class SitemapsController < ApplicationController
   #caches_page :index
-  cache_sweeper :sitemap_sweeper
+  #cache_sweeper :sitemap_sweeper
   
   def index
     @static_paths = [movies_url, articles_url]
