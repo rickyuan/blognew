@@ -1,5 +1,5 @@
 class SitemapsController < ApplicationController
-  caches_page :index
+  #caches_page :index
   cache_sweeper :sitemap_sweeper
   
   def index
