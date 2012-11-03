@@ -158,7 +158,7 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica,Lucida,Verdana,Hiragino Sans GB,WenQuanYi Micro Hei, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #333333;
@@ -431,7 +431,7 @@ p {
 }
 
 p small {
-  font-size: 11px;
+  font-size: 12px;
   color: #999999;
 }
 
@@ -511,7 +511,7 @@ h5 {
 }
 
 h6 {
-  font-size: 11px;
+  font-size: 12px;
   color: #999999;
   text-transform: uppercase;
 }
@@ -2696,7 +2696,7 @@ button.close {
 
 .btn-small {
   padding: 5px 9px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 16px;
 }
 
@@ -2706,7 +2706,7 @@ button.close {
 
 .btn-mini {
   padding: 2px 6px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 14px;
 }
 
@@ -3230,7 +3230,7 @@ input[type="submit"].btn.btn-mini {
 .nav .nav-header {
   display: block;
   padding: 3px 15px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   line-height: 18px;
   color: #999999;
@@ -3799,7 +3799,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a {
   float: none;
-  padding: 9px 10px 11px;
+  padding: 9px 10px 12px;
   line-height: 19px;
   color: #999999;
   text-decoration: none;
@@ -4286,7 +4286,7 @@ input[type="submit"].btn.btn-mini {
   z-index: 1020;
   display: block;
   padding: 5px;
-  font-size: 11px;
+  font-size: 12px;
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: visible;
